@@ -29,6 +29,10 @@ namespace MVC_loginIdentityCore5
             services.AddRazorPages();
             services.AddDbContext<AuthDBConetext>(optios => optios.UseSqlServer(Configuration.GetConnectionString("ConectiionString")));
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AuthDBConetext>();
+            services.ConfigureApplicationCookie(config =>
+           {
+               config.LoginPath = "/Login";
+           });
 
         }
 
