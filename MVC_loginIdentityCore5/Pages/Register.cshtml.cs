@@ -1,6 +1,3 @@
- using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MVC_loginIdentityCore5.ViewModel;
@@ -17,7 +14,7 @@ namespace MVC_loginIdentityCore5.Pages
         public Register model { get; set; }
 
         public RegisterModel(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
-        {   
+        {
             this.userManager = userManager;
             this.signInManager = signInManager;
         }
